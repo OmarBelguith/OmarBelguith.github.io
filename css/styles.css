@@ -7,7 +7,3 @@
 .myJumbotron{
     background-image: url(../img/william-bout-264826.jpg);
 }
-img{
-    height:inherit !important;
-    width:inherit !important;
-}
