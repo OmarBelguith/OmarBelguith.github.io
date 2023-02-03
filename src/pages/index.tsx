@@ -24,8 +24,6 @@ export default function Home() {
         <Hero/>
         <Features/>
         <About/>
-        <Projects/>
-        <BlogSection/>
         <Footer/>
       </main>
     </>
