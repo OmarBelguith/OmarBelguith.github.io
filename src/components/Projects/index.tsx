@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react';
 import ProjectCard from '../ProjectCard';
 import introdus from '@/assets/Introdus.png';
-import ItMatched from '@assets/it-matched.png';
+import ItMatched from '@/assets/it-matched.png';
 import yelp from '@/assets/yelp.png';
 export default function Projects() {
     return (
