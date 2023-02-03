@@ -12,9 +12,7 @@ import {
 import { BsArrowUpRight, BsHeartFill, BsHeart, BsGithub } from 'react-icons/bs';
 import Link from 'next/link';
 
-export default function ProjectCard({ imaegUrl, showGithub, projectDescription, projectTag, projectTitle, projectURL }: { imaegUrl: string, showGithub: boolean, projectDescription: string, projectTag: string, projectTitle: string, projectURL: string }) {
-  const [liked, setLiked] = useState(false);
-
+export default function ProjectCard({ imaegUrl, projectDescription, projectTag, projectTitle, projectURL }: { imaegUrl: string, projectDescription: string, projectTag: string, projectTitle: string, projectURL: string }) {
   return (
     <Center py={6}>
       <Box
@@ -57,30 +55,21 @@ export default function ProjectCard({ imaegUrl, showGithub, projectDescription, 
           </Text>
         </Box>
         <HStack borderTop={'1px'} color={useColorModeValue('black', 'white')}>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            cursor={'pointer'}
-            w="full">
-            <Link href={projectURL} passHref>
+          <Link href={projectURL} passHref>
+            <Flex
+              p={4}
+              alignItems="center"
+              justifyContent={'space-between'}
+              roundedBottom={'sm'}
+              cursor={'pointer'}
+              w="full">
+
               <Text fontSize={'md'} fontWeight={'semibold'}>
                 View Website
               </Text>
               <BsArrowUpRight />
-            </Link>
-          </Flex>
-          <Flex
-            p={4}
-            alignItems="center"
-            justifyContent={'space-between'}
-            roundedBottom={'sm'}
-            borderLeft={'1px'}
-            cursor="pointer"
-            onClick={() => setLiked(!liked)}>
-            {showGithub && <BsGithub />}
-          </Flex>
+            </Flex>
+          </Link>
         </HStack>
       </Box>
     </Center>
