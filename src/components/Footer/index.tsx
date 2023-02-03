@@ -7,7 +7,7 @@ import {
     useColorModeValue,
     VisuallyHidden,
   } from '@chakra-ui/react';
-  import { FaInstagram, FaTwitter, FaYoutube } from 'react-icons/fa';
+  import { FaGithub, FaInstagram, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
   import { ReactNode } from 'react';
   
   const Logo = (props: any) => {
@@ -74,16 +74,16 @@ import {
           justify={{ base: 'center', md: 'space-between' }}
           align={{ base: 'center', md: 'center' }}>
           <Logo />
-          <Text>© 2022 Chakra Templates. All rights reserved</Text>
+          <Text>© 2023 Omar Belghith. All rights reserved</Text>
           <Stack direction={'row'} spacing={6}>
-            <SocialButton label={'Twitter'} href={'#'}>
+            <SocialButton label={'Twitter'} href={'https://twitter.com/omarbelghith2'}>
               <FaTwitter />
             </SocialButton>
-            <SocialButton label={'YouTube'} href={'#'}>
-              <FaYoutube />
+            <SocialButton label={'Github'} href={'https://github.com/OmarBelguith'}>
+              <FaGithub />
             </SocialButton>
-            <SocialButton label={'Instagram'} href={'#'}>
-              <FaInstagram />
+            <SocialButton label={'Linkedin'} href={'https://www.linkedin.com/in/omar-belguith-profile/'}>
+              <FaLinkedin />
             </SocialButton>
           </Stack>
         </Container>
