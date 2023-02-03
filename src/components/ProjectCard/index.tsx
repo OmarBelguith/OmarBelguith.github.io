@@ -10,8 +10,9 @@ import {
   HStack,
 } from '@chakra-ui/react';
 import { BsArrowUpRight, BsHeartFill, BsHeart, BsGithub } from 'react-icons/bs';
+import Link from 'next/link';
 
-export default function ProjectCard() {
+export default function ProjectCard({ imaegUrl, showGithub, projectDescription, projectTag, projectTitle, projectURL }: { imaegUrl: string, showGithub: boolean, projectDescription: string, projectTag: string, projectTitle: string, projectURL: string }) {
   const [liked, setLiked] = useState(false);
 
   return (
@@ -28,9 +29,7 @@ export default function ProjectCard() {
         boxShadow={useColorModeValue('6px 6px 0 black', '6px 6px 0 cyan')}>
         <Box h={'200px'} borderBottom={'1px'} borderColor="black">
           <Img
-            src={
-              'https://images.unsplash.com/photo-1542435503-956c469947f6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80'
-            }
+            src={imaegUrl}
             roundedTop={'sm'}
             objectFit="cover"
             h="full"
@@ -47,15 +46,14 @@ export default function ProjectCard() {
             color={useColorModeValue('white', 'black')}
             mb={2}>
             <Text fontSize={'xs'} fontWeight="medium">
-              React
+              {projectTag}
             </Text>
           </Box>
           <Heading color={useColorModeValue('black', 'white')} fontSize={'2xl'} noOfLines={1}>
-            React v18.0
+            {projectTitle}
           </Heading>
           <Text color={useColorModeValue('gray.500', 'gray.200')} noOfLines={2}>
-            In this post, we will give an overview of what is new in React 18,
-            and what it means for the future.
+            {projectDescription}
           </Text>
         </Box>
         <HStack borderTop={'1px'} color={useColorModeValue('black', 'white')}>
@@ -66,10 +64,12 @@ export default function ProjectCard() {
             roundedBottom={'sm'}
             cursor={'pointer'}
             w="full">
-            <Text fontSize={'md'} fontWeight={'semibold'}>
-              View more
-            </Text>
-            <BsArrowUpRight />
+            <Link href={projectURL} passHref>
+              <Text fontSize={'md'} fontWeight={'semibold'}>
+                View Website
+              </Text>
+              <BsArrowUpRight />
+            </Link>
           </Flex>
           <Flex
             p={4}
@@ -79,7 +79,7 @@ export default function ProjectCard() {
             borderLeft={'1px'}
             cursor="pointer"
             onClick={() => setLiked(!liked)}>
-              <BsGithub/>
+            {showGithub && <BsGithub />}
           </Flex>
         </HStack>
       </Box>
