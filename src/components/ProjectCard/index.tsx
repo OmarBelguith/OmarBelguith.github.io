@@ -55,21 +55,22 @@ export default function ProjectCard({ imaegUrl, projectDescription, projectTag, 
           </Text>
         </Box>
         <HStack borderTop={'1px'} color={useColorModeValue('black', 'white')}>
-          <Link href={projectURL} passHref>
             <Flex
               p={4}
               alignItems="center"
               justifyContent={'space-between'}
               roundedBottom={'sm'}
               cursor={'pointer'}
-              w="full">
-
+              w="full"
+              as={'a'}
+              href={projectURL}
+              >
               <Text fontSize={'md'} fontWeight={'semibold'}>
                 View Website
               </Text>
               <BsArrowUpRight />
             </Flex>
-          </Link>
+
         </HStack>
       </Box>
     </Center>
