@@ -54,7 +54,7 @@ export default function Hero() {
           </Stack>
         </Stack>
       </Flex>
-      <Flex flex={1}>
+      <Flex p={8} flex={1} align={'center'} justify={'center'}>
         <Image
           alt={'Login Image'}
           objectFit={'cover'}

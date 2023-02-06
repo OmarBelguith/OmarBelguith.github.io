@@ -17,7 +17,7 @@ export default function Home() {
         <title>Omar Belghith</title>
         <meta name="description" content="Omar Belghith - Empowering aspiring technologists to reach their full potential by leveraging my extensive experience as a Full Stack Engineer and passion for mentorship." />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="icon" href="/favicon.ico" />
+        <link rel="icon" href="/omar-b-logos_white.ico" />
       </Head>
       <main>
         <Nav/>
