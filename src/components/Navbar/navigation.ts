@@ -13,29 +13,29 @@ export const navigation: NavItems[] = [
         href: '/',
         icon: FaHome,
     },
-    {
-        label: 'Professional Journey',
-        href: '/professional-journey',
-        icon: FaSuitcase,
-    },
-    {
-        label: 'Projects',
-        href: '/projects',
-        icon: FaCode,
-    },
-    {
-        label: 'Blog',
-        href: '/blog',
-        icon: FaBlog,
-    },
-    {
-        label: 'Courses',
-        href: '/courses',
-        icon: FaGraduationCap,
-    },
-    {
-        label: 'Contact',
-        href: '/contact',
-        icon: FaEnvelope,
-    },
+    // {
+    //     label: 'Professional Journey',
+    //     href: '/professional-journey',
+    //     icon: FaSuitcase,
+    // },
+    // {
+    //     label: 'Projects',
+    //     href: '/projects',
+    //     icon: FaCode,
+    // },
+    // {
+    //     label: 'Blog',
+    //     href: '/blog',
+    //     icon: FaBlog,
+    // },
+    // {
+    //     label: 'Courses',
+    //     href: '/courses',
+    //     icon: FaGraduationCap,
+    // },
+    // {
+    //     label: 'Contact',
+    //     href: '/contact',
+    //     icon: FaEnvelope,
+    // },
 ];

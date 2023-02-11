@@ -6,7 +6,7 @@ import Features from '@/components/Features'
 import Footer from '@/components/Footer'
 import About from '@/components/About'
 import Projects from '@/components/Projects'
-import BlogSection from '@/components/BlogSection'
+import Layout from '@/components/Layout'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -20,12 +20,12 @@ export default function Home() {
         <link rel="icon" href="/omar-b-logos_white.ico" />
       </Head>
       <main>
-        <Nav/>
-        <Hero/>
-        <Features/>
-        <About/>
-        <Projects/>
-        <Footer/>
+        <Layout>
+          <Hero />
+          <Features />
+          <About />
+          <Projects />
+        </Layout>
       </main>
     </>
   )
